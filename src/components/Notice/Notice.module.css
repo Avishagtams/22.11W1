@@ -4,12 +4,22 @@
 
 /* REQUIRED BY THE TESTS: the box */
 .notice {
+  padding: 12px 16px;
+  border: 1px solid;
+  border-radius: 10px;
+  font-weight: 500;
 }
 
 /* REQUIRED BY THE TESTS: yellow background */
 .warning {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #92400e;
 }
 
 /* REQUIRED BY THE TESTS: blue background */
 .info {
+  background: #dbeafe;
+  border-color: #3b82f6;
+  color: #1e40af;
 }

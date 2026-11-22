@@ -4,40 +4,99 @@
 
 /* the card - border, padding, shadow */
 .card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition:
+    box-shadow 0.15s,
+    border-color 0.15s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* REQUIRED BY THE TESTS: the card of the selected member */
 .selected {
+  border-color: #3b82f6;
 }
 
 /* REQUIRED BY THE TESTS: an inactive member - the card looks faded */
 .inactive {
+  opacity: 0.5;
+  background: #f9fafb;
 }
 
 /* a circle with the initials, same size for all */
 .avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-weight: 700;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
 }
 
 /* the member name */
 .name {
+  font-weight: 600;
 }
 
 /* the role badge */
 .badge {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  background: #f3f4f6;
+  border-radius: 999px;
 }
 
 /* the small action button (disabled -> faded, no hover effect) */
 .roleButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.roleButton:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+.roleButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /* REQUIRED BY THE TESTS: the button of a Leader - blue */
 .leader {
+  background: #2563eb;
 }
 
 /* REQUIRED BY THE TESTS: the button of a Member - green */
 .member {
+  background: #16a34a;
 }
 
 /* REQUIRED BY THE TESTS: the button of a Guest - purple */
 .guest {
+  background: #7c3aed;
 }

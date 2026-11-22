@@ -4,16 +4,25 @@
 
 /* REQUIRED BY THE TESTS: the element that wraps all the cards */
 .membersList {
+  display: grid;
+  gap: 12px;
 }
 
 /* REQUIRED BY THE TESTS: list layout - one card under the other */
 .list {
+  grid-template-columns: 1fr;
 }
 
 /* REQUIRED BY THE TESTS: grid layout - cards in columns */
 .grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
 /* the message "No members to show" */
 .empty {
+  padding: 24px;
+  text-align: center;
+  color: #6b7280;
+  background: #fff;
+  border-radius: 10px;
 }

@@ -4,26 +4,48 @@
 
 /* the whole panel */
 .tasksPanel {
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 /* the title with the member name */
 .title {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
 }
 
 /* the list of tasks */
 .tasks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* one task */
 .task {
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
 /* a done task (e.g. line-through) */
 .done {
+  text-decoration: line-through;
+  color: #9ca3af;
 }
 
 /* the messages "Select a member..." / "No tasks yet" */
 .empty {
+  margin: 0;
+  color: #6b7280;
 }
 
 /* bonus: the done/total counter */
